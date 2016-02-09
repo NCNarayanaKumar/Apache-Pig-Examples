@@ -32,7 +32,7 @@ grouped_data = GROUP unioned_data BY (a,b);
 --nested ForEach
 removed_data = FOREACH grouped_data {
 	FOREACH grouped_data GENERATE b, c;
-}
+};
 
 --check bulit in functions for date time after pig version 0.12
 --ToDate
