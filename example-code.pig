@@ -1,5 +1,5 @@
 --Register required libraries
-REGISTER /usr/lib/hbase/lib/*.jar;
+--REGISTER /usr/lib/hbase/lib/*.jar;
 
 --declare variables that are going to be used as params. Sjould be inside ''
 %DECLARE variable_name 'sample_input';
@@ -27,7 +27,7 @@ joined_data = JOIN data1 BY id, data2 BY index;
 unioned_data = UNION data1, data2;
 
 --group by single column, more than 1 column
-grouped_data = GROUP unioned_data BY (a,b)
+grouped_data = GROUP unioned_data BY (a,b);
 
 --nested ForEach
 removed_data = FOREACH grouped_data {
